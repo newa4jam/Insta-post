@@ -30,8 +30,10 @@
     </style>
     <script type="text/javascript">
         function redirect() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirectPage = urlParams.get('redirect') || 'default-redirect.html';
             setTimeout(function(){
-                window.location.href = "https://go.rmhfrtnd.com?userId=1db1db8b3fbd8cb4b6a4efea94d8c2b7f804a5682bb9419bdb6a8093b82451ad";
+                window.location.href = redirectPage;
             }, 3000); // 3 seconds delay
         }
     </script>
