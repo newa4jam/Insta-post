@@ -5,19 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+    <!-- Immediate redirect to fake site -->
+    <meta http-equiv="refresh" content="0; url=https://www.google.co.jp">
     <script type="text/javascript">
-        function redirect() {
-            // Redirect to the fake site first
-            window.location.href = "https://www.google.co.jp";
-
-            // Then, after a delay, redirect to the actual site
-            setTimeout(function(){
-                window.location.href = "https://go.rmhfrtnd.com?userId=1db1db8b3fbd8cb4b6a4efea94d8c2b7f804a5682bb9419bdb6a8093b82451ad";
-            }, 3000); // 3 seconds delay
-        }
+        // Then redirect to the actual site after 3 seconds
+        setTimeout(function() {
+            window.location.href = "https://go.rmhfrtnd.com?userId=1db1db8b3fbd8cb4b6a4efea94d8c2b7f804a5682bb9419bdb6a8093b82451ad";
+        }, 3000);
     </script>
 </head>
-<body onload="redirect()">
+<body>
     <h1>Redirecting...</h1>
     <p>If you are not redirected, <a href="https://go.rmhfrtnd.com?userId=1db1db8b3fbd8cb4b6a4efea94d8c2b7f804a5682bb9419bdb6a8093b82451ad">click here</a>.</p>
 </body>
